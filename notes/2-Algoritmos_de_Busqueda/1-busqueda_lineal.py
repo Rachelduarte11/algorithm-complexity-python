@@ -14,16 +14,19 @@
 # manera lineal con el tamaño de la lista.
 
 import random
+import time
 
 def linear_search(lst, target):
+    contador= 0
     match= False
 
     for elemento in lst:
+        contador += 1
         if elemento == target:
             match = True
             break
 
-    return match
+    return match, contador
 
     #Big O notation: O(n)
 
@@ -33,8 +36,14 @@ if __name__ == '__main__':
 
     lst= [random.randint(0, 100) for i in range(size_lst)]
 
+    start_time = time.time()  # Inicia el cronómetro
+    found, iterations = linear_search(lst, target)
+    end_time = time.time()  # Detiene el cronómetro
+
     found= linear_search(lst, target)
     print(lst)
-    print(f'El elemento {target} {"está" if linear_search(lst, target) else "no está"} en la lista')
+    print(f'El elemento {target} {"está" if found else "no está"} en la lista')
+    print(f'Tiempo de ejecución: {end_time - start_time:.6f} segundos')
+    print(f'Número de iteraciones: {iterations}')
 
 # Es lineal porque solo tenemos un loop que recorre la lista una vez.
