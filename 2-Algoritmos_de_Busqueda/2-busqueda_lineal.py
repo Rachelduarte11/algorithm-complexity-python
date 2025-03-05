@@ -47,3 +47,6 @@ if __name__ == '__main__':
     print(f'Número de iteraciones: {iterations}')
 
 # Es lineal porque solo tenemos un loop que recorre la lista una vez.
+
+# Te invito a que pruebes el código con diferentes tamaños de lista y valores a buscar.
+

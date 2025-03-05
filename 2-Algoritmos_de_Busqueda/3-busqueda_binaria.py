@@ -44,3 +44,8 @@ if __name__ == '__main__':
     print(f'El elemento {target} {"está" if found else "no está"} en la lista')
     print(f'Tiempo de ejecución: {end_time - start_time:.6f} segundos')
     print(f'Número de iteraciones: {contador[0]}')
+
+# La búsqueda binaria es más eficiente que la búsqueda lineal, ya que divide el arreglo en dos mitades
+# y descarta una mitad en cada iteración. Esto hace que el tiempo de ejecución crezca de manera logarítmica
+
+# Te invito a que pruebes el código con diferentes tamaños de lista y valores a buscar.
